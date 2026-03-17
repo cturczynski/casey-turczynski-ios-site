@@ -467,7 +467,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 pb-20 md:pb-32">
         <div className="bg-slate-900 text-white p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl">
           <h2 className="text-2xl sm:text-3xl font-semibold">
-            Need senior iOS help?
+            Need help with your iOS app?
           </h2>
 
           <p className="mt-4 text-base text-slate-300 leading-relaxed">
