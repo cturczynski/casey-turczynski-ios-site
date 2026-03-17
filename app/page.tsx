@@ -5,42 +5,51 @@ export default function Home() {
     <main className="text-slate-900">
       {/* NAV */}
       <nav
-        className="sticky top-0 z-50 border-b border-slate-200/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(255,255,255,0.8)_inset]"
+        className="sticky top-0 z-50 border-b border-slate-200/80 backdrop-blur-md"
         style={{
-          background: "linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(248,250,252,0.95) 50%, rgba(241,245,249,0.92) 100%)",
+          background: "linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,251,252,0.96) 100%)",
+          boxShadow: "0 1px 0 0 rgba(255,255,255,0.9) inset, 0 1px 2px rgba(0,0,0,0.04)",
         }}
       >
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-5 flex items-center justify-between gap-8">
           <a
             href="https://www.linkedin.com/in/casey-turczynski/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 text-base font-semibold text-slate-900 hover:text-slate-600 transition-colors tracking-tight"
+            className="group flex items-center gap-3.5 min-w-0 shrink-0 transition-colors"
           >
-            <Image
-              src="/casey-profile.png"
-              alt="Casey Turczynski"
-              width={36}
-              height={36}
-              className="rounded-full object-cover shrink-0"
-            />
-            Casey Turczynski
+            <span className="relative flex shrink-0 w-12 h-12">
+              {/* Background circle */}
+              <span
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-100 ring-2 ring-slate-200/90 ring-offset-2"
+                aria-hidden
+              />
+              {/* Profile image: slightly larger than circle, centered for pop-out */}
+              <Image
+                src="/casey-profile.png"
+                alt="Casey Turczynski"
+                width={48}
+                height={48}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            </span>
+            <span className="text-base font-semibold text-slate-900 tracking-tight truncate group-hover:text-slate-600 transition-colors">Casey Turczynski</span>
           </a>
-          <div className="flex items-center gap-6 sm:gap-8 flex-wrap justify-end">
-            <a href="#services" className="text-base text-slate-600 hover:text-slate-900 transition-colors">
+          <div className="flex items-center gap-10 flex-wrap justify-end">
+            <a href="#services" className="text-sm text-slate-500 hover:text-slate-900 transition-colors py-1">
               Services
             </a>
-            <a href="#case" className="text-base text-slate-600 hover:text-slate-900 transition-colors">
-              Currently on the App Store
+            <a href="#case" className="text-sm text-slate-500 hover:text-slate-900 transition-colors py-1">
+              Products & Experience
             </a>
-            <a href="#contact" className="text-base text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="#contact" className="text-sm text-slate-500 hover:text-slate-900 transition-colors py-1">
               Contact
             </a>
             <a
               href="https://calendly.com/cturczynski97/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base font-medium bg-slate-900 text-white px-5 py-2.5 rounded-lg hover:bg-slate-800 transition-colors"
+              className="text-sm font-semibold text-white bg-slate-900 px-5 py-2.5 rounded-xl shadow-sm hover:bg-slate-800 hover:shadow-md transition-all duration-200 ml-1"
             >
               Book Call
             </a>
@@ -73,15 +82,15 @@ export default function Home() {
               Senior iOS Consultant • Startup MVPs • SwiftUI Modernization
             </div>
 
-            <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.15] tracking-tight text-slate-900">
+            <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl xl:text-[3.25rem] font-semibold leading-[1.1] tracking-tight text-slate-900 mx-auto max-w-3xl">
               I help startups build iOS MVPs and help teams modernize legacy apps with SwiftUI.
             </h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed mx-auto max-w-3xl">
-              Senior iOS consultant with 12+ years of Swift experience. I work with founders and product teams on startup MVP development, Obj-C/UIKit to SwiftUI migrations, and mobile architecture.
+            <p className="mt-10 text-lg sm:text-xl text-slate-600 leading-relaxed mx-auto max-w-2xl">
+              Senior iOS consultant with 12+ years of Swift experience. I work with founders and product teams on MVP development, Obj-C/UIKit to SwiftUI migrations, and mobile architecture.
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-10 justify-center">
+            <div className="flex flex-wrap gap-4 mt-12 justify-center">
               <a
                 href="mailto:cturczynski97@gmail.com"
                 className="bg-slate-900 text-white px-6 py-3.5 rounded-xl font-medium hover:bg-slate-800 transition-colors"
@@ -237,80 +246,177 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
+      {/* PRODUCTS & EXPERIENCE */}
       <section id="case" className="bg-slate-50/80">
         <div className="max-w-6xl mx-auto px-6 py-28">
-        <h2 className="text-3xl font-semibold mb-12">
-          Currently on the App Store
-        </h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 mb-20">
+            Products & Experience
+          </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Krsor */}
-          <article className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col">
-            <span className="text-xs font-medium uppercase tracking-wider text-slate-400">
-              Released January 2024
-            </span>
-            <h3 className="mt-2 font-semibold text-2xl text-slate-900">
-              Krsor
+          {/* Founder-Led Products */}
+          <div className="mb-24">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Portfolio</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mb-8">
+              Founder-Led Products
             </h3>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              A peer-to-peer shipping platform that connects travelers with people who need items transported, allowing users to monetize unused cargo space while offering cheaper shipping alternatives.
-            </p>
-            <div className="mt-6">
-              <p className="text-sm font-semibold text-slate-900">My Role</p>
-              <ul className="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
-                <li>Sole iOS developer</li>
-                <li>Frontend and Backend architecture</li>
-                <li>Founder collaboration</li>
-                <li>From scratch to App Store launch</li>
-              </ul>
-            </div>
-            <a
-              href="https://apps.apple.com/us/app/krsor/id6445802920"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors"
-            >
-              View on App Store
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          </article>
+            <div className="grid md:grid-cols-2 gap-8">
+            {/* Krsor - featured */}
+            <article className="relative p-9 bg-white rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col ring-1 ring-slate-900/5">
+              <span className="absolute top-5 right-5 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white">On the App Store</span>
+              <h4 className="font-semibold text-2xl sm:text-3xl text-slate-900 pr-24">Krsor</h4>
+              <p className="mt-3 text-slate-600 leading-relaxed">
+                A transportation marketplace that allows travelers to monetize unused vehicle space while enabling users to ship items more affordably than traditional carriers.
+              </p>
+              <div className="mt-5">
+                <p className="text-sm font-semibold text-slate-900">My Role</p>
+                <ul className="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                  <li>Sole iOS developer and technical lead</li>
+                  <li>Designed and implemented core mobile architecture</li>
+                  <li>Collaborated directly with founders on product direction</li>
+                  <li>Built and launched the app to the App Store</li>
+                </ul>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">iOS Architecture</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Startup MVP</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Marketplace</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">App Store Launch</span>
+              </div>
+              <a
+                href="https://apps.apple.com/us/app/krsor/id6445802920"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors"
+              >
+                View on App Store
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </article>
 
-          {/* outSMARTPD */}
-          <article className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col">
-            <span className="text-xs font-medium uppercase tracking-wider text-slate-400">
-              Released May 2024
-            </span>
-            <h3 className="mt-2 font-semibold text-2xl text-slate-900">
-              outSMARTPD
+            {/* outSMARTPD - featured */}
+            <article className="relative p-9 bg-white rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col ring-1 ring-slate-900/5">
+              <span className="absolute top-5 right-5 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white">On the App Store</span>
+              <h4 className="font-semibold text-2xl sm:text-3xl text-slate-900 pr-24">outSMARTPD</h4>
+              <p className="mt-3 text-slate-600 leading-relaxed">
+                A medical iOS application that enables at-home assessment of Parkinsonian behavioral and motor symptoms using guided text and motion-based workflows.
+              </p>
+              <div className="mt-5">
+                <p className="text-sm font-semibold text-slate-900">My Role</p>
+                <ul className="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                  <li>Lead iOS engineer</li>
+                  <li>Built the app from the ground up</li>
+                  <li>Implemented sensor-driven motion analysis workflows</li>
+                  <li>Partnered with founders on product and UX decisions</li>
+                </ul>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">HealthTech</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Sensor Data</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Swift</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">App Store Launch</span>
+              </div>
+              <a
+                href="https://apps.apple.com/us/app/outsmartpd/id6462346736"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors"
+              >
+                View on App Store
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </article>
+
+            {/* Stock Champ */}
+            <article className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col">
+              <h4 className="font-semibold text-2xl text-slate-900">Stock Champ</h4>
+              <p className="mt-3 text-slate-600 leading-relaxed">
+                A fintech platform where users compete in stock-picking tournaments, building portfolios to win a share of the prize pool.
+              </p>
+              <div className="mt-5">
+                <p className="text-sm font-semibold text-slate-900">My Role</p>
+                <ul className="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                  <li>Founder and product creator</li>
+                  <li>Sole iOS developer</li>
+                  <li>Designed full application architecture and system flows</li>
+                  <li>Led a team of 4 including backend and finance contributors</li>
+                  <li>Coordinated beta testing with 50+ users via TestFlight</li>
+                  <li>Managed branding, marketing direction, and product positioning</li>
+                </ul>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Founder</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">FinTech</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">MVP Development</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Team Leadership</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Beta Testing</span>
+              </div>
+            </article>
+
+            {/* GoLoCo */}
+            <article className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col">
+              <h4 className="font-semibold text-2xl text-slate-900">GoLoCo</h4>
+              <p className="mt-3 text-slate-600 leading-relaxed">
+                A music discovery app that uses Spotify playlists to recommend live shows near users based on their listening habits.
+              </p>
+              <div className="mt-5">
+                <p className="text-sm font-semibold text-slate-900">My Role</p>
+                <ul className="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                  <li>Sole iOS developer and lead engineer</li>
+                  <li>Took over from an offshore prototype and rebuilt the app</li>
+                  <li>Overhauled architecture and core product functionality</li>
+                  <li>Worked directly with the founder from rebuild through App Store launch</li>
+                  <li>Contributed to backend user data systems</li>
+                </ul>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Music Tech</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Spotify API</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Product Rebuild</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">App Store Launch</span>
+              </div>
+            </article>
+          </div>
+          </div>
+
+          {/* Enterprise Leadership - featured */}
+          <div className="pt-4 border-t border-slate-200/80">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Experience</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mb-8">
+              Enterprise Leadership
             </h3>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              A medical mobile application that provides an at-home assessment of Parkinsonian symptoms using behavioral surveys and sensor-based motor testing.
-            </p>
-            <div className="mt-6">
-              <p className="text-sm font-semibold text-slate-900">Role</p>
-              <ul className="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
-                <li>Sole iOS engineer</li>
-                <li>Built the app from the ground up, to successful App Store launch</li>
-                <li>Implemented complex sensor-driven symptom analysis</li>
-                <li>Collaborated with the founding team on product direction</li>
-              </ul>
-            </div>
-            <a
-              href="https://apps.apple.com/us/app/outsmartpd/id6462346736"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors"
-            >
-              View on App Store
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          </article>
-        </div>
+            <article className="relative overflow-hidden rounded-2xl bg-slate-900 text-white shadow-xl">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-slate-700/30 to-transparent rounded-full -translate-y-1/2 translate-x-1/2" aria-hidden />
+              <div className="relative p-8 sm:p-12">
+                <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-white/10 text-slate-200 mb-6">Featured experience</span>
+                <h4 className="font-semibold text-2xl sm:text-3xl text-white">Senior iOS Developer & Team Lead</h4>
+                <p className="mt-4 text-slate-300 leading-relaxed max-w-3xl text-lg">
+                  Senior engineer and team lead on a large-scale safety iOS application used by construction companies.
+                </p>
+                <div className="mt-8">
+                  <p className="text-sm font-semibold text-white">Responsibilities</p>
+                  <ul className="mt-3 space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
+                    <li>Contribute to a production iOS app for over 3 years</li>
+                    <li>Lead a mobile development team for the past 2 years</li>
+                    <li>Drive architecture decisions for new product initiatives</li>
+                    <li>Plan and execute major app revamps and improvements</li>
+                    <li>Partner with product managers on roadmap decisions and trade-offs</li>
+                    <li>Serve as a primary contributor for high-priority bug fixes and client escalations</li>
+                    <li>Collaborate across mobile and web teams on shared features</li>
+                  </ul>
+                </div>
+                <div className="mt-8 flex flex-wrap gap-2">
+                  <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-white/10 text-slate-200">Team Leadership</span>
+                  <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-white/10 text-slate-200">iOS Architecture</span>
+                  <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-white/10 text-slate-200">Enterprise App</span>
+                  <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-white/10 text-slate-200">Product Strategy</span>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
