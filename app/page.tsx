@@ -1,53 +1,10 @@
 import Image from "next/image";
+import Navbar from "./Navbar";
 
 export default function Home() {
   return (
     <main className="text-slate-900">
-      {/* NAV */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 flex items-center justify-between gap-3 sm:gap-8 min-w-0">
-          <a
-            href="https://www.linkedin.com/in/casey-turczynski/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-2.5 sm:gap-3.5 min-w-0 shrink-0 transition-colors"
-          >
-            <span className="relative flex shrink-0 w-12 h-12">
-              <span
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-100 ring-2 ring-slate-200/90 ring-offset-2"
-                aria-hidden
-              />
-              <Image
-                src="/casey-profile.png"
-                alt="Casey Turczynski"
-                width={48}
-                height={48}
-                className="absolute left-1/2 top-1/2 w-[115%] h-[115%] min-w-[115%] min-h-[115%] -translate-x-1/2 -translate-y-1/2 object-cover object-center"
-              />
-            </span>
-            <span className="text-sm sm:text-base font-semibold text-slate-900 tracking-tight truncate group-hover:text-slate-600 transition-colors">Casey Turczynski</span>
-          </a>
-          <div className="flex items-center gap-4 sm:gap-8 flex-wrap justify-end min-w-0">
-            <a href="#services" className="text-xs sm:text-sm text-slate-500 hover:text-slate-900 transition-colors py-1.5 whitespace-nowrap">
-              Services
-            </a>
-            <a href="#case" className="text-xs sm:text-sm text-slate-500 hover:text-slate-900 transition-colors py-1.5 whitespace-nowrap">
-              Products & Experience
-            </a>
-            <a href="#contact" className="text-xs sm:text-sm text-slate-500 hover:text-slate-900 transition-colors py-1.5 whitespace-nowrap">
-              Contact
-            </a>
-            <a
-              href="https://calendly.com/cturczynski97/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs sm:text-sm font-semibold text-white bg-slate-900 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl shadow-sm hover:bg-slate-800 hover:shadow-md transition-all duration-200 shrink-0"
-            >
-              Book a Call
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
@@ -256,8 +213,10 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Krsor - featured */}
             <article className="relative p-6 sm:p-9 bg-white rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col ring-1 ring-slate-900/5">
-              <span className="absolute top-4 right-4 sm:top-5 sm:right-5 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white">On the App Store</span>
-              <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 pr-20 sm:pr-24">Krsor</h4>
+              <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
+                <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 md:pr-24">Krsor</h4>
+                <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
+              </div>
               <p className="mt-3 text-slate-600 leading-relaxed">
                 A transportation marketplace that allows travelers to monetize unused vehicle space while enabling users to ship items more affordably than traditional carriers.
               </p>
@@ -291,8 +250,10 @@ export default function Home() {
 
             {/* outSMARTPD - featured */}
             <article className="relative p-6 sm:p-9 bg-white rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col ring-1 ring-slate-900/5">
-              <span className="absolute top-4 right-4 sm:top-5 sm:right-5 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white">On the App Store</span>
-              <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 pr-20 sm:pr-24">outSMARTPD</h4>
+              <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
+                <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 md:pr-24">outSMARTPD</h4>
+                <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
+              </div>
               <p className="mt-3 text-slate-600 leading-relaxed">
                 A medical iOS application that enables at-home assessment of Parkinsonian behavioral and motor symptoms using guided text and motion-based workflows.
               </p>
