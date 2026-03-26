@@ -82,7 +82,7 @@ export default function Home() {
       {/* SERVICES */}
       <section id="services" className="bg-slate-50/80">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-8 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-8 sm:mb-12">
           Services
         </h2>
 
@@ -153,7 +153,7 @@ export default function Home() {
       {/* HOW I WORK */}
       <section className="bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-8 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-8 sm:mb-12">
           How I Work With Teams
         </h2>
 
@@ -197,8 +197,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ABOUT ME */}
+      <section id="about" className="bg-slate-50/80">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-8 sm:mb-10">
+            About Me
+          </h2>
+
+          <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-6 sm:p-8 md:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-start md:items-center">
+              <div className="relative w-full max-w-sm md:max-w-none mx-auto md:mx-0">
+                <div className="relative w-full overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-200/80">
+                  <Image
+                    src="/casey-about-casual.png?v=3"
+                    alt="Casey Turczynski"
+                    width={800}
+                    height={1067}
+                    sizes="(max-width: 768px) min(100vw, 24rem), 400px"
+                    className="w-full h-auto object-cover object-center"
+                    priority
+                    unoptimized
+                  />
+                </div>
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+                  I’ve been building with Swift since 2014, and I still love the process of turning ideas into real products.
+                </p>
+                <ul className="mt-6 sm:mt-8 space-y-5 text-base text-slate-600 leading-relaxed">
+                  <li className="flex gap-3 items-start">
+                    <span className="mt-[0.67em] h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden />
+                    <span>
+                      I learned Swift my senior year of high school in 2014. It was my first coding language, and I loved it from the start.
+                    </span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="mt-[0.67em] h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden />
+                    <span>
+                      I started by building simple block-collision games, then worked my way up to full-scale App Store products by my junior year of college.
+                    </span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="mt-[0.67em] h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden />
+                    <span>
+                      I greatly enjoy the entrepreneurial process — taking an idea from whiteboard to wireframes to App Store launch. I’ve built multiple app-based startups of my own, and have also advised and developed for several others.
+                    </span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="mt-[0.67em] h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden />
+                    <span>
+                      I graduated from UNC–Chapel Hill in 2019 with a double major in Computer Science and Statistics, plus a minor in Entrepreneurship.
+                    </span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="mt-[0.67em] h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden />
+                    <span>
+                      Since then, I’ve had two professional coding jobs, with one year in between working as a bartender.
+                    </span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="mt-[0.67em] h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden />
+                    <span>
+                      Outside of work, I enjoy working out, video games, pickup basketball, poker, and investing. I also consider myself semi-pro at foosball and cornhole.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PRODUCTS & EXPERIENCE */}
-      <section id="case" className="bg-slate-50/80">
+      <section id="case" className="bg-white border-t border-slate-200/60">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-12 md:mb-20">
             Products & Experience
@@ -210,9 +282,10 @@ export default function Home() {
             <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mb-6 sm:mb-8">
               Founder-Led Products
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="rounded-2xl bg-[#f7f8fa] p-4 sm:p-6 md:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Krsor - featured */}
-            <article className="relative p-6 sm:p-9 bg-white rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col ring-1 ring-slate-900/5">
+            <article className="relative p-6 sm:p-9 bg-white rounded-2xl shadow-[0_12px_40px_-16px_rgba(15,23,42,0.14),0_4px_12px_-4px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_48px_-12px_rgba(15,23,42,0.16),0_6px_16px_-4px_rgba(15,23,42,0.1)] transition-all duration-200 flex flex-col">
               <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
                 <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 md:pr-24">Krsor</h4>
                 <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
@@ -249,7 +322,7 @@ export default function Home() {
             </article>
 
             {/* outSMARTPD - featured */}
-            <article className="relative p-6 sm:p-9 bg-white rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col ring-1 ring-slate-900/5">
+            <article className="relative p-6 sm:p-9 bg-white rounded-2xl shadow-[0_12px_40px_-16px_rgba(15,23,42,0.14),0_4px_12px_-4px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_48px_-12px_rgba(15,23,42,0.16),0_6px_16px_-4px_rgba(15,23,42,0.1)] transition-all duration-200 flex flex-col">
               <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
                 <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 md:pr-24">outSMARTPD</h4>
                 <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
@@ -286,7 +359,7 @@ export default function Home() {
             </article>
 
             {/* Stock Champ */}
-            <article className="p-6 sm:p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col">
+            <article className="p-6 sm:p-8 bg-white rounded-2xl shadow-[0_8px_24px_-14px_rgba(15,23,42,0.1),0_2px_6px_-3px_rgba(15,23,42,0.06)] hover:shadow-[0_12px_28px_-10px_rgba(15,23,42,0.12),0_4px_10px_-4px_rgba(15,23,42,0.08)] transition-all duration-200 flex flex-col">
               <h4 className="font-semibold text-2xl text-slate-900">Stock Champ</h4>
               <p className="mt-3 text-slate-600 leading-relaxed">
                 A fintech platform where users compete in stock-picking tournaments, building portfolios to win a share of the prize pool.
@@ -312,7 +385,7 @@ export default function Home() {
             </article>
 
             {/* GoLoCo */}
-            <article className="p-6 sm:p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col">
+            <article className="p-6 sm:p-8 bg-white rounded-2xl shadow-[0_8px_24px_-14px_rgba(15,23,42,0.1),0_2px_6px_-3px_rgba(15,23,42,0.06)] hover:shadow-[0_12px_28px_-10px_rgba(15,23,42,0.12),0_4px_10px_-4px_rgba(15,23,42,0.08)] transition-all duration-200 flex flex-col">
               <h4 className="font-semibold text-2xl text-slate-900">GoLoCo</h4>
               <p className="mt-3 text-slate-600 leading-relaxed">
                 A music discovery app that uses Spotify playlists to recommend live shows near users based on their listening habits.
@@ -334,7 +407,8 @@ export default function Home() {
                 <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">App Store Launch</span>
               </div>
             </article>
-          </div>
+            </div>
+            </div>
           </div>
 
           {/* Enterprise Leadership - featured */}
@@ -375,14 +449,14 @@ export default function Home() {
       </section>
 
       {/* IDEAL CLIENT */}
-      <section className="bg-white">
+      <section className="bg-slate-50/80 border-t border-slate-200/60">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
-          <h2 className="text-2xl sm:text-3xl font-semibold mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-8 sm:mb-12">
             Ideal Clients
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-            <div className="group flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 hover:border-slate-300 hover:shadow-md transition-all duration-200">
+            <div className="group flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-white shadow-sm ring-1 ring-slate-200/60 hover:border-slate-300 hover:shadow-md transition-all duration-200">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-200/80 text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-200">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -391,7 +465,7 @@ export default function Home() {
               <p className="text-base text-slate-700 font-medium leading-relaxed pt-0.5">Startup founders building their first iOS MVP</p>
             </div>
 
-            <div className="group flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 hover:border-slate-300 hover:shadow-md transition-all duration-200">
+            <div className="group flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-white shadow-sm ring-1 ring-slate-200/60 hover:border-slate-300 hover:shadow-md transition-all duration-200">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-200/80 text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-200">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
@@ -400,7 +474,7 @@ export default function Home() {
               <p className="text-base text-slate-700 font-medium leading-relaxed pt-0.5">Teams modernizing legacy UIKit or Objective-C apps</p>
             </div>
 
-            <div className="group flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 hover:border-slate-300 hover:shadow-md transition-all duration-200">
+            <div className="group flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-white shadow-sm ring-1 ring-slate-200/60 hover:border-slate-300 hover:shadow-md transition-all duration-200">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-200/80 text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-200">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -409,7 +483,7 @@ export default function Home() {
               <p className="text-base text-slate-700 font-medium leading-relaxed pt-0.5">Companies needing senior iOS help 5–20 hrs/week</p>
             </div>
 
-            <div className="group flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 hover:border-slate-300 hover:shadow-md transition-all duration-200">
+            <div className="group flex items-start gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 bg-white shadow-sm ring-1 ring-slate-200/60 hover:border-slate-300 hover:shadow-md transition-all duration-200">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-200/80 text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-200">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 0113.5 18v-2.25z" />
@@ -422,7 +496,7 @@ export default function Home() {
       </section>
 
       {/* FREE ARCHITECTURE REVIEW */}
-      <section className="bg-slate-50/80">
+      <section className="bg-white border-t border-slate-200/60">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         <div className="bg-slate-900 text-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
@@ -463,7 +537,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="bg-white">
+      <section id="contact" className="bg-slate-50/80 border-t border-slate-200/60">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 pb-20 md:pb-32">
         <div className="bg-slate-900 text-white p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl">
           <h2 className="text-2xl sm:text-3xl font-semibold">

@@ -52,6 +52,9 @@ export default function Navbar() {
             <a href="#services" className="text-sm text-slate-500 hover:text-slate-900 transition-colors py-1.5 whitespace-nowrap">
               Services
             </a>
+            <a href="#about" className="text-sm text-slate-500 hover:text-slate-900 transition-colors py-1.5 whitespace-nowrap">
+              About Me
+            </a>
             <a href="#case" className="text-sm text-slate-500 hover:text-slate-900 transition-colors py-1.5 whitespace-nowrap">
               Products & Experience
             </a>
@@ -101,6 +104,13 @@ export default function Navbar() {
               className="text-base text-slate-600 hover:text-slate-900 py-3 px-2 rounded-lg hover:bg-slate-50 transition-colors"
             >
               Services
+            </a>
+            <a
+              href="#about"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-base text-slate-600 hover:text-slate-900 py-3 px-2 rounded-lg hover:bg-slate-50 transition-colors"
+            >
+              About Me
             </a>
             <a
               href="#case"
