@@ -284,6 +284,46 @@ export default function Home() {
             </h3>
             <div className="rounded-2xl bg-[#f7f8fa] p-4 sm:p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {/* LuckRoll - featured */}
+            <article className="relative md:col-span-2 p-6 sm:p-9 bg-white rounded-2xl shadow-[0_12px_40px_-16px_rgba(15,23,42,0.14),0_4px_12px_-4px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_48px_-12px_rgba(15,23,42,0.16),0_6px_16px_-4px_rgba(15,23,42,0.1)] transition-all duration-200 flex flex-col">
+              <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
+                <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 md:pr-24">LuckRoll</h4>
+                <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
+              </div>
+              <p className="mt-3 text-slate-600 leading-relaxed max-w-4xl">
+                A free-to-play luck competition app where players build the longest win streak in simple games of chance and compete for weekly cash prizes.
+              </p>
+              <div className="mt-5">
+                <p className="text-sm font-semibold text-slate-900">My Role</p>
+                <ul className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                  <li>Founder, product creator, and sole iOS developer</li>
+                  <li>Designed the product, brand, UX, and application architecture</li>
+                  <li>Built server-authoritative gameplay with Firebase</li>
+                  <li>Implemented weekly leaderboards, prizes, and player analytics</li>
+                  <li>Launched and iterated on the production App Store release</li>
+                  <li>Expanding the product with a native Android application</li>
+                </ul>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Founder</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">SwiftUI</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Firebase</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Product Design</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">App Store Launch</span>
+              </div>
+              <a
+                href="https://apps.apple.com/us/app/luckroll/id6780038103"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors"
+              >
+                View on App Store
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </article>
+
             {/* Krsor - featured */}
             <article className="relative p-6 sm:p-9 bg-white rounded-2xl shadow-[0_12px_40px_-16px_rgba(15,23,42,0.14),0_4px_12px_-4px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_48px_-12px_rgba(15,23,42,0.16),0_6px_16px_-4px_rgba(15,23,42,0.1)] transition-all duration-200 flex flex-col">
               <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
