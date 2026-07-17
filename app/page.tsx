@@ -291,7 +291,7 @@ export default function Home() {
                 <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
               </div>
               <p className="mt-3 text-slate-600 leading-relaxed max-w-4xl">
-                A free-to-play luck competition app where players build the longest win streak in simple games of chance and compete for weekly cash prizes.
+                A free-to-play luck-based competition app where players aim to build the longest win streak in simple games of chance, and compete for weekly cash prizes.
               </p>
               <div className="mt-5">
                 <p className="text-sm font-semibold text-slate-900">My Role</p>
