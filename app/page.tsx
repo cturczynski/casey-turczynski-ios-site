@@ -1,6 +1,19 @@
 import Image from "next/image";
 import Navbar from "./Navbar";
 
+function AppIcon({ src, name }: { src: string; name: string }) {
+  return (
+    <Image
+      src={src}
+      alt={`${name} app icon`}
+      width={192}
+      height={192}
+      className="h-12 w-12 sm:h-14 sm:w-14 shrink-0 rounded-[22.5%] shadow-sm ring-1 ring-slate-900/10"
+      unoptimized
+    />
+  );
+}
+
 export default function Home() {
   return (
     <main className="text-slate-900">
@@ -287,7 +300,10 @@ export default function Home() {
             {/* LuckRoll - featured */}
             <article className="relative md:col-span-2 p-6 sm:p-9 bg-white rounded-2xl shadow-[0_12px_40px_-16px_rgba(15,23,42,0.14),0_4px_12px_-4px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_48px_-12px_rgba(15,23,42,0.16),0_6px_16px_-4px_rgba(15,23,42,0.1)] transition-all duration-200 flex flex-col">
               <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
-                <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 md:pr-24">LuckRoll</h4>
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0 md:pr-24">
+                  <AppIcon src="/icons/luckroll.png" name="LuckRoll" />
+                  <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900">LuckRoll</h4>
+                </div>
                 <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
               </div>
               <p className="mt-3 text-slate-600 leading-relaxed max-w-4xl">
@@ -324,10 +340,56 @@ export default function Home() {
               </a>
             </article>
 
+            {/* Friends Day - featured */}
+            <article className="relative md:col-span-2 p-6 sm:p-9 bg-white rounded-2xl shadow-[0_12px_40px_-16px_rgba(15,23,42,0.14),0_4px_12px_-4px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_48px_-12px_rgba(15,23,42,0.16),0_6px_16px_-4px_rgba(15,23,42,0.1)] transition-all duration-200 flex flex-col">
+              <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0 md:pr-24">
+                  <AppIcon src="/icons/friendsday.png" name="Friends Day" />
+                  <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900">Friends Day</h4>
+                </div>
+                <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
+              </div>
+              <p className="mt-3 text-slate-600 leading-relaxed max-w-4xl">
+                A free iPhone and iPad app for planning one good day with friends. Pick a date, put ideas on it with times and places, then send one card and one link into Messages &mdash; so everyone sees the same plan, who is coming, and what changed.
+              </p>
+              <div className="mt-5">
+                <p className="text-sm font-semibold text-slate-900">My Role</p>
+                <ul className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                  <li>Founder, product creator, and sole iOS developer</li>
+                  <li>Designed the product, brand, UX, and application architecture</li>
+                  <li>Built a universal SwiftUI app for iPhone and iPad</li>
+                  <li>Built the Firebase backend: Cloud Functions, phone auth, and push</li>
+                  <li>Implemented shareable day links, share cards, and RSVPs</li>
+                  <li>Launched the 1.0 release to the App Store in August 2026</li>
+                </ul>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Founder</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">SwiftUI</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">Firebase</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">iPhone &amp; iPad</span>
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">App Store Launch</span>
+              </div>
+              <a
+                href="https://apps.apple.com/us/app/friends-day/id6794382999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors"
+              >
+                View on App Store
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </article>
+
             {/* Krsor - featured */}
             <article className="relative p-6 sm:p-9 bg-white rounded-2xl shadow-[0_12px_40px_-16px_rgba(15,23,42,0.14),0_4px_12px_-4px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_48px_-12px_rgba(15,23,42,0.16),0_6px_16px_-4px_rgba(15,23,42,0.1)] transition-all duration-200 flex flex-col">
               <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
-                <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 md:pr-24">Krsor</h4>
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0 md:pr-24">
+                  <AppIcon src="/icons/krsor.png" name="Krsor" />
+                  <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900">Krsor</h4>
+                </div>
                 <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
               </div>
               <p className="mt-3 text-slate-600 leading-relaxed">
@@ -364,7 +426,10 @@ export default function Home() {
             {/* outSMARTPD - featured */}
             <article className="relative p-6 sm:p-9 bg-white rounded-2xl shadow-[0_12px_40px_-16px_rgba(15,23,42,0.14),0_4px_12px_-4px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_48px_-12px_rgba(15,23,42,0.16),0_6px_16px_-4px_rgba(15,23,42,0.1)] transition-all duration-200 flex flex-col">
               <div className="flex flex-row items-center justify-between gap-3 flex-wrap md:block">
-                <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900 md:pr-24">outSMARTPD</h4>
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0 md:pr-24">
+                  <AppIcon src="/icons/outsmartpd.png" name="outSMARTPD" />
+                  <h4 className="font-semibold text-xl sm:text-2xl md:text-3xl text-slate-900">outSMARTPD</h4>
+                </div>
                 <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
               </div>
               <p className="mt-3 text-slate-600 leading-relaxed">
@@ -400,7 +465,10 @@ export default function Home() {
 
             {/* Stock Champ */}
             <article className="p-6 sm:p-8 bg-white rounded-2xl shadow-[0_8px_24px_-14px_rgba(15,23,42,0.1),0_2px_6px_-3px_rgba(15,23,42,0.06)] hover:shadow-[0_12px_28px_-10px_rgba(15,23,42,0.12),0_4px_10px_-4px_rgba(15,23,42,0.08)] transition-all duration-200 flex flex-col">
-              <h4 className="font-semibold text-2xl text-slate-900">Stock Champ</h4>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <AppIcon src="/icons/stockchamp.png" name="Stock Champ" />
+                <h4 className="font-semibold text-2xl text-slate-900">Stock Champ</h4>
+              </div>
               <p className="mt-3 text-slate-600 leading-relaxed">
                 A fintech platform where users compete in stock-picking tournaments, building portfolios to win a share of the prize pool.
               </p>
@@ -426,7 +494,10 @@ export default function Home() {
 
             {/* GoLoCo */}
             <article className="p-6 sm:p-8 bg-white rounded-2xl shadow-[0_8px_24px_-14px_rgba(15,23,42,0.1),0_2px_6px_-3px_rgba(15,23,42,0.06)] hover:shadow-[0_12px_28px_-10px_rgba(15,23,42,0.12),0_4px_10px_-4px_rgba(15,23,42,0.08)] transition-all duration-200 flex flex-col">
-              <h4 className="font-semibold text-2xl text-slate-900">GoLoCo</h4>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <AppIcon src="/icons/goloco.png" name="GoLoCo" />
+                <h4 className="font-semibold text-2xl text-slate-900">GoLoCo</h4>
+              </div>
               <p className="mt-3 text-slate-600 leading-relaxed">
                 A music discovery app that uses Spotify playlists to recommend live shows near users based on their listening habits.
               </p>
