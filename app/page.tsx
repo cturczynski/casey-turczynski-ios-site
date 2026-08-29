@@ -1,5 +1,90 @@
 import Image from "next/image";
 import Navbar from "./Navbar";
+import { SITE_URL } from "./site";
+
+// Structured data for search and answer engines. Every claim here is one the
+// page itself makes out loud — schema that disagrees with the visible copy is
+// worse than none, so nothing gets asserted that a reader cannot also see.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#casey`,
+      name: "Casey Turczynski",
+      url: SITE_URL,
+      image: `${SITE_URL}/casey-profile.png`,
+      jobTitle: "Senior iOS Consultant",
+      email: "mailto:cturczynski97@gmail.com",
+      description:
+        "Senior iOS consultant with 12+ years of Swift experience, working with founders and product teams on MVP development, Obj-C/UIKit to SwiftUI migrations, and mobile architecture.",
+      knowsAbout: [
+        "iOS development",
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "Objective-C",
+        "Mobile architecture",
+        "Startup MVP development",
+        "App Store launch",
+      ],
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "University of North Carolina at Chapel Hill",
+      },
+      sameAs: ["https://www.linkedin.com/in/casey-turczynski/"],
+    },
+    {
+      "@type": "Service",
+      "@id": `${SITE_URL}/#practice`,
+      name: "iOS consulting",
+      serviceType: "iOS app development consulting",
+      url: SITE_URL,
+      image: `${SITE_URL}/og-image.png`,
+      description:
+        "iOS consulting for startups and product teams: MVP development, SwiftUI modernization, mobile architecture, and fractional iOS leadership.",
+      provider: { "@id": `${SITE_URL}/#casey` },
+      areaServed: "Worldwide",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "iOS consulting services",
+        itemListElement: [
+          {
+            "@type": "Service",
+            name: "Startup MVP Development",
+            description: "From idea to App Store launch.",
+          },
+          {
+            "@type": "Service",
+            name: "SwiftUI Migration",
+            description: "Modernize legacy UIKit and Objective-C apps.",
+          },
+          {
+            "@type": "Service",
+            name: "iOS Architecture Consulting",
+            description: "Improve maintainability and developer velocity.",
+          },
+          {
+            "@type": "Service",
+            name: "Fractional iOS Leadership",
+            description: "Senior mobile expertise without a full-time hire.",
+          },
+        ].map((service) => ({
+          "@type": "Offer",
+          itemOffered: service,
+        })),
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Casey Turczynski",
+      inLanguage: "en-US",
+      publisher: { "@id": `${SITE_URL}/#casey` },
+    },
+  ],
+};
 
 function AppIcon({ src, name }: { src: string; name: string }) {
   return (
@@ -17,6 +102,10 @@ function AppIcon({ src, name }: { src: string; name: string }) {
 export default function Home() {
   return (
     <main className="text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
 
       {/* HERO */}
@@ -350,7 +439,7 @@ export default function Home() {
                 <span className="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-slate-900 text-white shrink-0 md:absolute md:top-5 md:right-5">On the App Store</span>
               </div>
               <p className="mt-3 text-slate-600 leading-relaxed max-w-4xl">
-                A free iPhone and iPad app for planning one good day with friends. Pick a date, put ideas on it with times and places, then send one card and one link into Messages &mdash; so everyone sees the same plan, who is coming, and what changed.
+                A free iPhone and iPad app for planning a day with friends. Pick a date, add ideas with times and places, and Friends Day builds a custom schedule card you send straight into Messages &mdash; everyone sees the plan, who&rsquo;s coming, and what changed.
               </p>
               <div className="mt-5">
                 <p className="text-sm font-semibold text-slate-900">My Role</p>
@@ -359,7 +448,7 @@ export default function Home() {
                   <li>Designed the product, brand, UX, and application architecture</li>
                   <li>Built a universal SwiftUI app for iPhone and iPad</li>
                   <li>Built the Firebase backend: Cloud Functions, phone auth, and push</li>
-                  <li>Implemented shareable day links, share cards, and RSVPs</li>
+                  <li>Built the server-rendered schedule card, share links, and RSVPs</li>
                   <li>Launched the 1.0 release to the App Store in August 2026</li>
                 </ul>
               </div>
