@@ -1,16 +1,15 @@
 /**
  * The one canonical origin for this site.
  *
- * Vercel also serves this deployment on `casey-ios-site-git-main-*` and
- * `casey-ios-site-*-projects.vercel.app`, but both sit behind deployment
- * protection and answer with `X-Robots-Tag: noindex` (verified 2026-08-27), so
- * they were never competing duplicates. What the canonical built from this
- * constant actually earns is consolidation of `?utm_source=…` and other
- * query-string variants of the real URL.
+ * Custom domain since 2026-08-31; the apex is canonical and `www` redirects to
+ * it. Vercel still serves the deployment on `casey-ios-site.vercel.app` and on
+ * the `*-git-main-*` / `*-projects.vercel.app` aliases — those cannot be removed
+ * from a project, so the canonical built from this constant is what tells search
+ * engines the apex is home. It also consolidates `?utm_source=…` variants.
  *
  * Anything that hardcodes a site URL must come through here.
  */
-export const SITE_URL = "https://casey-ios-site.vercel.app";
+export const SITE_URL = "https://caseyturczynski.com";
 
 export const SITE_NAME = "Casey Turczynski — Senior iOS Consultant";
 

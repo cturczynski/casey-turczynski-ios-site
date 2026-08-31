@@ -2,7 +2,7 @@
 """Tell IndexNow (Bing, Yandex, Seznam, Naver) that pages changed — no waiting for a crawl.
 
     python3 scripts/seo/indexnow.py                    # every page in the sitemap
-    python3 scripts/seo/indexnow.py https://casey-ios-site.vercel.app/
+    python3 scripts/seo/indexnow.py https://caseyturczynski.com/
 
 The key file must stay reachable at KEY_LOCATION or submissions are rejected — it is
 what proves we control the host. It lives in `public/`, so it ships with every deploy.
@@ -21,7 +21,7 @@ import re
 import subprocess
 import sys
 
-HOST = "casey-ios-site.vercel.app"
+HOST = "caseyturczynski.com"
 KEY = "b1f40422484b447efc7efb60b71f7087"
 KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 ENDPOINT = "https://api.indexnow.org/IndexNow"
